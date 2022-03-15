@@ -4,14 +4,13 @@ This repository contains the used source code of the experiments which led to th
 We used <a href='https://www.nature.com/articles/s41597-021-00937-4'>COUGHVID</a> dataset. <a href='https://zenodo.org/record/4048312'>See in Zenodo</a>. <br> The augmented version will be available soon <a href="https://github.com/skanderhamdi/melspectrogram_spec_aug_30_percent_randomly_freq_time_masking">here</a>. <br>
 The original dataset with silence removal will be available soon <a href="https://github.com/skanderhamdi/coughvid">here</a>.
 
-#### pitch_shift.py: 
-#### spec_augment.py: 
-### load_augmented_dataset.py: 
-### cnn_baseline.py: 
-### lstm_baseline.py: 
-### cnn_lstm_baseline.py: 
-### attention_cnn_lstm.py: 
-### run.py:
+- utils.py: Provides som helpful functions (progressbar, plotROCCurve, plotCurves, plotConfusionMatrix,...)
+- pitch_shift.py: Run this script to create the signal-augmented version of the dataset
+- spec_augment.py: Run this script to create the spectral-augmented version of the dataset (apply SpecAugment technique) 
+- cnn_baseline.py: Run this script to start CNN model training
+- lstm_baseline.py: Run this script to start LSTM model training
+- cnn_lstm_baseline.py: Run this script to start hybrid CNN-LSTM model training
+- attention_cnn_lstm.py: Run this script to start Attention-based hybrid CNN-LSTM model training
 
 # Reference
 Please cite our paper if you find this repository useful.
