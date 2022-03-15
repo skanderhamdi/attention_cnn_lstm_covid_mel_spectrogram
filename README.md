@@ -4,13 +4,13 @@ This repository contains the used source code of the experiments which led to th
 We used <a href='https://www.nature.com/articles/s41597-021-00937-4'>COUGHVID</a> dataset. <a href='https://zenodo.org/record/4048312'>See in Zenodo</a>. <br> The augmented version will be available soon <a href="https://github.com/skanderhamdi/melspectrogram_spec_aug_30_percent_randomly_freq_time_masking">here</a>. <br>
 The silence removed version of the dataset will be available soon <a href="https://github.com/skanderhamdi/coughvid">here</a>.
 
-- utils.py: Provides som helpful functions (progressbar, plotROCCurve, plotCurves, plotConfusionMatrix,...)
-- pitch_shift.py: Run this script to create the signal-augmented version of the dataset
-- spec_augment.py: Run this script to create the spectral-augmented version of the dataset (apply SpecAugment technique) 
-- cnn_baseline.py: Run this script to start CNN model training
-- lstm_baseline.py: Run this script to start LSTM model training
-- cnn_lstm_baseline.py: Run this script to start hybrid CNN-LSTM model training
-- attention_cnn_lstm.py: Run this script to start Attention-based hybrid CNN-LSTM model training
+- <b>utils.py</b>: Provides som helpful functions (progressbar, plotROCCurve, plotCurves, plotConfusionMatrix,...)
+- <b>pitch_shift.py</b>: Run this script to create the signal-augmented version of the dataset
+- <b>spec_augment.py</b>: Run this script to create the spectral-augmented version of the dataset (apply SpecAugment technique) 
+- <b>cnn_baseline.py</b>: Run this script to start CNN model training
+- <b>lstm_baseline.py</b>: Run this script to start LSTM model training
+- <b>cnn_lstm_baseline.py</b>: Run this script to start hybrid CNN-LSTM model training
+- <b>attention_cnn_lstm.py</b>: Run this script to start Attention-based hybrid CNN-LSTM model training
 
 <b>Note: </b> You should change the relative paths in the scripts
 
