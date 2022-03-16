@@ -140,7 +140,7 @@ for train,test in kfold.split(trainX,trainY):
     print(f'Training for fold {fold_no} ...')
     inputs = Input(shape=input_shape,name='input')
     x = Conv2D(16,(2,2),strides=(1,1),padding='valid',kernel_initializer='normal')(inputs)
-    x = AveragePooling2D((2,2), strides=(1,1))(x)
+    x = AveragePooling2D((2,2), strides=(2,2))(x)
     x = Activation('relu')(x)
     x = Dropout(0.2)(x)
     x = Conv2D(16,(2,2), strides=(1, 1), padding="valid",kernel_initializer='normal')(x)
