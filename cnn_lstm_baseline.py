@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import backend as K
 from tensorflow.keras.layers import Conv2D
 from tensorflow.keras.layers import AveragePooling2D
-from tensorflow.keras.layers import Flatten
+from tensorflow.keras.layers import Reshape
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Input
@@ -19,7 +19,6 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Activation
 from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.layers import LSTM
-from tensorflow.keras.layers import TimeDistributed
 import tensorflow.keras
 from tensorflow.keras.callbacks import ModelCheckpoint
 from sklearn.model_selection import KFold
@@ -146,24 +145,24 @@ for train,test in kfold.split(trainX,trainY):
     x = AveragePooling2D((2,2), strides=(2,2))(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
-    x = Dropout(0.5)(x)
+    x = Dropout(0.2)(x)
     x = Conv2D(32,(2,2), strides=(1, 1), padding="valid",kernel_initializer='normal')(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
-    x = Dropout(0.5)(x)
+    x = Dropout(0.2)(x)
     x = Conv2D(64,(2,2), strides=(1, 1), padding="valid",kernel_initializer='normal')(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
-    x = Dropout(0.5)(x)
+    x = Dropout(0.2)(x)
     x = Conv2D(128,(2,2), strides=(1, 1), padding="valid",kernel_initializer='normal')(x)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
-    x = Dropout(0.5)(x)
-    td = TimeDistributed(Flatten())(x)
+    x = Dropout(0.2)(x)
+    td = Reshape([16,40*128])(x)
     x = LSTM(256, return_sequences=False)(td)
     x = Activation('tanh')(x)
     x = BatchNormalization()(x)
-    x = Dropout(0.6)(x)
+    x = Dropout(0.2)(x)
     x = Dense(100)(x)
     x = Activation('relu')(x)
     x = Dropout(0.5)(x)
