@@ -182,7 +182,7 @@ for train,test in kfold.split(trainX,trainY):
     histories.append(history)
     scores = model.evaluate(trainX[test], trainY[test], verbose=0)
     covPredict = model.predict(trainX[test])
-    covPredict = np.where(covPredict > 0.5, 1,0)
+    covPredict = np.where(covPredict >= 0.5, 1,0)
     real_stat = trainY[test]
     acc_per_fold.append(scores[1])
     recall_per_fold.append(my_recall(real_stat, covPredict))
@@ -205,7 +205,7 @@ for train,test in kfold.split(trainX,trainY):
     print("Specificity : ",(2*get_balanced_acc(trainY[test],covPredict))-my_recall(trainY[test],covPredict))
     score = model.evaluate(testX,testY,verbose=0)
     covPredict = model.predict(testX)
-    covPredict = np.where(covPredict > 0.5, 1,0)
+    covPredict = np.where(covPredict >= 0.5, 1,0)
     print("Test results for the fold "+str(fold_no)+":")
     print("Accuracy : ",score[1])
     print("Precision : ",my_precision(testY,covPredict))
@@ -242,7 +242,7 @@ best_model = 7
 model = load_model('model_best_weights_'+str(best_model)+'.hdf5')
 score = model.evaluate(testX,testY, verbose=0)
 covPredict = model.predict(testX)
-covPredict = np.where(covPredict > 0.5, 1,0)
+covPredict = np.where(covPredict >= 0.5, 1,0)
 
 ## Plot confusion matrix
     
