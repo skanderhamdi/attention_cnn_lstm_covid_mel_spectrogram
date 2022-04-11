@@ -22,7 +22,8 @@ Please cite our paper if you find this repository useful.
   title = {Attention-based Hybrid CNN-LSTM and Spectral Data Augmentation for COVID-19 Diagnosis from Cough Sound},
   author = {Skander Hamdi, Mourad Oussalah, Abdelouahab Moussaoui and Mohamed Saidi},
   journal = {Journal of Intelligent Information Systems},
-  year = {2022}
+  year = {2022},
+  {doi} = {https://doi.org/10.1007/s10844-022-00707-7}
 }
 ```
 
