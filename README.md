@@ -23,7 +23,7 @@ Please cite our paper if you find this repository useful.
   author = {Skander Hamdi, Mourad Oussalah, Abdelouahab Moussaoui and Mohamed Saidi},
   journal = {Journal of Intelligent Information Systems},
   year = {2022},
-  {doi} = {https://doi.org/10.1007/s10844-022-00707-7}
+  doi = {doi:10.1007/s10844-022-00707-7}
 }
 ```
 
