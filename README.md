@@ -18,12 +18,14 @@ The silence removed version of the dataset will be available soon <a href="https
 Please cite our paper if you find this repository useful.
 
 ```
-@article{hamdi2022,
-  title = {Attention-based Hybrid CNN-LSTM and Spectral Data Augmentation for COVID-19 Diagnosis from Cough Sound},
-  author = {Skander Hamdi, Mourad Oussalah, Abdelouahab Moussaoui and Mohamed Saidi},
-  journal = {Journal of Intelligent Information Systems},
-  year = {2022},
-  doi = {doi:10.1007/s10844-022-00707-7}
+@article{Hamdi2022,
+author = {Hamdi, Skander and Oussalah, Mourad and Moussaoui, Abdelouahab and Saidi, Mohamed},
+doi = {10.1007/s10844-022-00707-7},
+issn = {1573-7675},
+journal = {Journal of Intelligent Information Systems},
+title = {{Attention-based hybrid CNN-LSTM and spectral data augmentation for COVID-19 diagnosis from cough sound}},
+url = {https://doi.org/10.1007/s10844-022-00707-7},
+year = {2022}
 }
 ```
 
