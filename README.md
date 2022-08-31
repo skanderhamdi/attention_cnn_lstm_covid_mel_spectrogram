@@ -1,8 +1,8 @@
 #### Attention-based Hybrid CNN-LSTM and Spectral Data Augmentation for COVID-19 Diagnosis from Cough Sound
 This repository contains the used source code of the experiments which led to the results presented in the paper <b>Attention-based Hybrid CNN-LSTM and Spectral Data Augmentation for COVID-19 Diagnosis from Cough Sound</b>
 
-We used <a href='https://www.nature.com/articles/s41597-021-00937-4'>COUGHVID</a> dataset. <a href='https://zenodo.org/record/4048312'>See in Zenodo</a>. <br> The augmented version will be available soon <a href="https://github.com/skanderhamdi/melspectrogram_spec_aug_30_percent_randomly_freq_time_masking">here</a>. <br>
-The silence removed version of the dataset will be available soon <a href="https://github.com/skanderhamdi/coughvid">here</a>.
+We used <a href='https://www.nature.com/articles/s41597-021-00937-4'>COUGHVID</a> dataset. <a href='https://zenodo.org/record/4048312'>See in Zenodo</a>. <br> The augmented version is now available publicly on the Kaggle plateform <a href="https://www.kaggle.com/datasets/alex1994/melspectrogram-spec-aug-30-percent">here</a>. <br>
+The silence removed version of the dataset is now available <a href="https://drive.google.com/drive/folders/1AeY4y0aC0PqmM5V6yM9YRsNNkzGUHedB?usp=sharing">here</a>.
 
 - <b>utils.py</b>: Provides some helpful functions (progressbar, plotROCCurve, plotCurves, plotConfusionMatrix,...)
 - <b>attention_layer.py</b>: Attention layer class
